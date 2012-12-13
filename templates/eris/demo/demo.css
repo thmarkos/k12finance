@@ -1,0 +1,20 @@
+/*
+this stylesheet is only for demo purposes
+*/
+
+#demopanel {left: 0;position: absolute;top:90px;z-index: 99999;}
+.panel_button { position: relative; left:230px; width:48px; cursor: pointer;}
+#panel {position: absolute;top:-28px;left:0px;overflow: hidden;background:#000;-moz-border-radius: 0px 4px 4px 0px;-webkit-border-radius: 0px 4px 4px 0px;border-radius: 0px 4px 4px 0px;padding:15px 12px 15px 13px;width:205px;font-size:10px;color:#999;}
+#panel h3 {border-bottom:1px solid #343434; color:#9c9c9c; padding-bottom:4px; margin-bottom:8px; margin-top:0;}
+
+#panel select {width:125px; background:#fff; -webkit-transition:none;  -moz-transition:none; -o-transition:none;  -ms-transition:none; transition:none; font-size:12px;}
+#panel .heading {font-family:Arial, sans-serif; margin-top:10px;}
+#panel .heading.nomargin {margin-top:0;}
+#panel .selector ul {list-style: none outside none;margin: 0;padding: 0;}
+#panel .selector  ul li {border: 1px solid #888888;cursor: pointer;float: left;height: 15px;margin: 3px;width: 15px;}
+#panel .selector input[type=text]  {font-size:11px; background:none; filter:none; -webkit-transition:none;  -moz-transition:none; -o-transition:none;  -ms-transition:none; transition:none; width:180px; padding:6px 4px; margin-bottom:0; border: 1px solid #ccc;}
+#panel .selector select {font-size:11px; filter:none; -webkit-transition:none;  -moz-transition:none; -o-transition:none;  -ms-transition:none; transition:none; width:180px; padding:2px 4px; height:auto; margin:0;}
+#panel .selector select.big_select {width:190px;  padding: 5px;}
+
+#panel td {padding:0;}
+#panel span.note {line-height: 14px; margin-top: 10px; display: block;}

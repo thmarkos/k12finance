@@ -1,0 +1,20 @@
+/* Clear Set */
+html body * span.clear, html body * div.clear, html body * li.clear, html body * dd.clear {background: none;border: 0;clear: both;display: block;float: none;font-size: 0;list-style: none;margin: 0;padding: 0;overflow: hidden;visibility: hidden;width: 0;height: 0;}
+.clearfix:after {clear: both;content: '.';display: block;visibility: hidden;height: 0;}
+.clearfix {display: inline-block;}
+* html .clearfix {height: 1%;}
+.clearfix {display: block;}
+
+ul.adminformlist li:after {clear: both;content: '.';display: block;visibility: hidden;height: 0;}
+
+.redtitle {color:#f00; font-size:110%; font-weight:bold; margin:10px 0; border-bottom:1px solid #ccc; }
+.adminformlist li {clear:both;}
+.somemargin {margin:20px 0; }
+.enote {color:#888;}
+span.topmargin {margin-top:20px; display: block;}
+
+.redtitle label, .enote label {max-width:100% !important;}
+
+.hrline hr {margin:15px 0;}
+
+.infoField {font-size:12px; line-height:18px; color:#333; padding:10px; margin:10px 0; background: #FAF2B6; height: auto; min-width: 100% important!; max-width: 100% important!;}

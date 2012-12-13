@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="1.6.0" client="site" method="upgrade">
+	<name>HG Google Map Module</name>
+	<author>Marius Hogas</author>
+	<creationDate>Dec 2011</creationDate>
+	<copyright>Copyright (C) 2005 - 2011 Open Source Matters. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>mhogas@gmail.com</authorEmail>
+	<authorUrl>www.hogash.com</authorUrl>
+	<version>1.0.0</version>
+	<description><![CDATA[
+	This module adds an awesome full width/height google map, a counter for event, color styling, custom pin markers etc. To find coordinates, go to <a href="http://itouchmap.com/latlong.html" target="_blank">http://itouchmap.com/latlong.html</a>. <strong>Unlimited Pins</strong>. To play with the map colors and styles you can try this tool right here <a href="http://gmaps-samples-v3.googlecode.com/svn/trunk/styledmaps/wizard/index.html" target="_blank">http://gmaps-samples-v3.googlecode.com/svn/trunk/styledmaps/wizard/index.html</a>.
+	]]></description>
+	<files>
+		<filename module="mod_hg_googlemap">mod_hg_googlemap.php</filename>
+		<filename>index.html</filename>
+		<filename>mod_hg_googlemap.xml</filename>
+		<folder>admin</folder>
+		<folder>assets</folder>
+		<folder>tmpl</folder>
+	</files>
+
+	<help key="EOS Google Map Module" />
+	<config>
+		<fields name="params" addfieldpath="/modules/mod_hg_googlemap/admin/elements">
+			<fieldset name="basic">
+				<field type="colorpickerassets" path="modules/mod_hg_googlemap/admin/jscolor/" />
+				
+				<field type="info" label="Map Settings"/>
+				<field name="width" type="text" default="940" label="Map Width" />
+				<field name="height" type="text" default="320" label="Map Height" />
+				
+				<field name="imagepin" type="media" directory="marker-images" default="" label="Upload Image Pin" description="Select a new image pin and upload it. The main foreground image. 24-bit PNG image with alpha transparency." />
+				<field name="anchor" type="list" default="bottom-center" label="Anchor Point" description="Choose wether the anchor point is one of these 3 options. The default is bottom-center">
+					<option value="bottom-center">Bottom Center</option>
+					<option value="bottom-left">Bottom Left</option>
+					<option value="bottom-right">Bottom Right</option>
+				</field>
+				
+				<field type="Separator" />
+				
+				<field name="centerMap" type="text" default="40.74455835,-74.0563488" label="Center map point" size="50" description="Add latitude and longitude separated by comma." />
+				<field name="zoom" type="text" default="13" label="Map Zoom" />
+				<field name="type" type="list" default="ROADMAP" label="Map Type">
+					<option value="TERRAIN">Terrain</option>
+					<option value="ROADMAP">Roadmap</option>
+					<option value="HYBRID">Hybrid</option>
+					<option value="SATELLITE">Satellite</option>
+				</field>
+				<field name="enable_control" type="list" default="1" label="Enable Controls?">
+					<option value="true">Yes</option>
+					<option value="false">No</option>
+				</field>
+				<field name="controll" type="list" default="DROPDOWN_MENU" label="Controls">
+					<option value="DEFAULT">Default</option>
+					<option value="DROPDOWN_MENU">Dropdown Menu</option>
+					<option value="HORIZONTAL_BAR">Horizontal Bar</option>
+				</field>
+				<field name="draging" type="radio" default="false" label="Enable map dragging?">
+					<option value="false">No</option>
+					<option value="true">Yes</option>
+				</field>
+				<field name="mousewheel" type="radio" default="false" label="Zooming with mouse?">
+					<option value="false">No</option>
+					<option value="true">Yes</option>
+				</field>
+				<field name="marker_animation" type="radio" default="1" label="Marker Animation?">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="animation_type" type="radio" default="DROP" label="Animation Type">
+					<option value="DROP">Drop</option>
+					<option value="BOUNCE">Bounce</option>
+				</field>
+								
+				<field type="info" label="Map Pins (add comma between coordinates and newline for new pin)"/>
+				<field name="markers" type="textarea" default="" label="MARKERS" description="Add map markers. Separate coordinates with commas and newline between pins." cols="40" rows="10" />
+
+				
+				<field type="asset" path="modules/mod_hg_googlemap/admin/" />
+			</fieldset>
+			<fieldset name="advanced">
+				<field name="moduleclass_sfx" type="text" label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL" description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+				<field name="cache" type="list" default="0" label="COM_MODULES_FIELD_CACHING_LABEL" description="COM_MODULES_FIELD_CACHING_DESC">
+					<option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

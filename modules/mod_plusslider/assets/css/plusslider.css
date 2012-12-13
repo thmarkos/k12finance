@@ -1,0 +1,58 @@
+* { margin: 0; padding: 0; } /* Hard reset */
+
+/* The following styles are essential to the slider's functionality */
+
+	.plusslider {
+		overflow: hidden;
+		position: relative;
+		padding: 0; /* The height / width of the slider should never be set via the CSS. The padding increases the slider box-model while keeping it dynamic */
+	}
+
+	.plusslider-container { position: relative; z-index:1; }
+	
+	/* Slides must have a set width - even though they may be dynamic. If no width is set on <img> slides, the default image size will be assumed */
+	
+
+	.plusslider .child { float: left; position: relative; overflow:hidden;}
+
+	/* PlusFader Specific (not needed with plustype:slider */
+	.plustype-fader .child { display: none; position: absolute; left: 0; top: 0; }
+	.plustype-fader .current { z-index: 5; }
+	/* End PlusFader Specific */
+
+	/* No-javascript fallback -- change "#slider" and "#slider2" identifiers as needed for your html */
+	#slider > * { display: none; }
+	#slider > *:first-child, #slider2 > *:first-child { display: block; }
+	/* End no-javascript fallback */
+	
+	.plusslider-arrows-wrapper {position:absolute; top:50%; margin-top:-26px; width:940px; left:50%; margin-left:-470px; z-index: 3; opacity:0.5;
+	-webkit-transition: opacity 200ms ease-in-out; -moz-transition: opacity 200ms ease-in-out; -o-transition: opacity 200ms ease-in-out; -ms-transition: opacity 200ms ease-in-out;}
+	.plusslider:hover .plusslider-arrows-wrapper {opacity:1;}
+	.plusslider-arrows {margin:0; padding:0; list-style:none; position:relative;}
+	.plusslider-arrows li {position:absolute; top:0; left:0; width:50px; height:50px; text-indent:-9999px; background-image:url(../images/arrow_sprite.png); background-repeat:no-repeat; z-index:3; cursor:pointer;}
+	.plusslider-arrows li { background-color:rgba(255,255,255,0.3); -webkit-border-radius:3px; -moz-border-radius:3px; border-radius:3px; }
+	.plusslider-arrows li:hover { background-color:rgba(255,255,255,0.7); }
+	.plusslider-arrows li.next {left:auto; right:0; }
+
+	.plusslider-arrows li.next {background-position:right top;}
+	.plusslider-arrows li.next:hover {background-position:left top;}
+	.plusslider-arrows li.prev  {background-position:left bottom;}
+	.plusslider-arrows li.prev:hover {background-position:right bottom;}
+	
+	.plusslider-pagination-wrapper {position: absolute; z-index: 2; margin-left: -470px; bottom: 15px; left: 50%; width: 940px;}
+	.plusslider-pagination {list-style:none; margin:0; padding:0;}
+	.plusslider-pagination li {float:left; margin:10px 5px; width:10px; height:10px; background:#FFF; -webkit-border-radius:50%; -moz-border-radius:50%; border-radius:50%; text-indent:-9999px; cursor:pointer; }	
+	.plusslider-pagination li.current { margin:5px 0; border-width:5px; border-style: solid; }
+
+/* End essential styles*/
+
+
+.titles-wrapper {width:940px; position:absolute; left:50%; margin-left:-470px; z-index: 3; bottom: 60px;}
+.plustype-fader .current .titles-wrapper { z-index:6; }
+
+.plusslider .titles h2,
+.plusslider .titles h3 {color:#fff; padding:0; display:block;  text-shadow:0 1px 0 #000; margin: 10px 0; }
+.plusslider .titles h2 {font-size:40px; font-weight:400; line-height: 1; }
+.plusslider .titles h3 {font-size:25px; font-weight:300; line-height: 1; }
+
+.plusslider .titles {float:left; border:1px solid #fff; border:1px solid rgba(255,255,255,0.6); background:rgba(0,0,0,0.3); padding: 0 20px 0 2000px; margin: 0 0 25px -2000px; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px;}

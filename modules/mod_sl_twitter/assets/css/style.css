@@ -1,0 +1,81 @@
+/**
+ * @version		$Id$
+ * @author		Pham Minh Tuan (admin@vnskyline.com)
+ * @package		Joomla.Site
+ * @subpakage	Skyline.Twitter
+ * @copyright	Copyright (c) 2012 Skyline Software (http://www.vnskyline.com). All rights reserved.
+ * @license		GNU General Public License version 2 or later; see LICENSE.txt
+ */
+
+ul.sl_tweets {
+	border-radius: 4px;
+	box-shadow: 1px 1px 0 #d4d4d4;
+	color: #777;
+	font-size: 12px;
+	list-style: none;
+	margin: 0;
+	moz-border-radius: 4px;
+	moz-box-shadow: 1px 1px 0 #d4d4d4;
+	text-shadow: 1px 1px 0 #fff;
+	webkit-border-radius: 4px;
+	webkit-box-shadow: 1px 1px 0 #d4d4d4;
+}
+
+ul.sl_tweets li {
+	background: linear-gradient(0 0 -90deg,#FCFCFC, #F5F5F5);
+	background: -moz-linear-gradient(0 0 -90deg,#FCFCFC, #F5F5F5);
+	background: -webkit-linear-gradient(0 0 -90deg,#FCFCFC, #F5F5F5);
+	border-bottom: 1px solid #E4E4E4;
+	border-left: 1px solid #E4E4E4;
+	border-top: 1px solid #FFF;
+	padding: 10px 15px;
+}
+
+ul.sl_tweets li:first-child {
+	border-radius: 4px 4px 0 0;
+	border-top: 1px solid #e4e4e4;
+}
+
+ul.sl_tweets li:last-child {
+	border-bottom: none;
+	border-radius: 0 0 4px 4px;
+}
+
+ul.sl_tweets li p {
+	margin: 0;
+}
+
+ul.sl_tweets li a {
+	border: medium none !important;
+	color: #095197;
+}
+
+ul.sl_tweets li a:hover,
+ul.sl_tweets li a:active,
+ul.sl_tweets li a:focus {
+	background: none;
+	color: #095197;
+}
+
+ul.sl_tweets li > span a {
+	color: #AAAAAA !important;
+	text-decoration: none;
+}
+
+ul.sl_tweets li > span {
+	display: block;
+    font-size: 11px;
+    margin-top: 10px;
+    text-shadow: 1px 1px 0 #F4F4F4;
+}
+
+ul.sl_tweets li > span > span {
+	cursor: help;
+    font-size: 10px;
+}
+
+ul.sl_tweets li .date {
+	color: #B4B4B4;
+    float: right;
+    font-size: 10px;
+}

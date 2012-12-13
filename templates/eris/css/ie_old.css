@@ -1,0 +1,40 @@
+.plusslider .titles {
+background: transparent;
+-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#4C000000,endColorstr=#4C000000)"; /* IE8 */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#4C000000,endColorstr=#4C000000);   /* IE6 & 7 */
+      zoom: 1;
+}
+.recent_projects .items li .details {
+background: transparent;
+-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#B2000000,endColorstr=#B2000000)"; /* IE8 */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#B2000000,endColorstr=#B2000000);   /* IE6 & 7 */
+      zoom: 1;
+}
+#rt-showcase {position:relative; z-index:1;}
+.plusslider-arrows li {
+-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#4CFFFFFF,endColorstr=#4CFFFFFF)"; /* IE8 */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#4CFFFFFF,endColorstr=#4CFFFFFF);   /* IE6 & 7 */
+      zoom: 1;
+}
+.plusslider-arrows li:hover {
+-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#B2FFFFFF,endColorstr=#B2FFFFFF)"; /* IE8 */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#B2FFFFFF,endColorstr=#B2FFFFFF);   /* IE6 & 7 */
+      zoom: 1;
+}
+.featured_box {zoom:1}
+.component-content .cols-1 .img-intro-left {zoom:1; padding-right:20px;}
+.component-content .cols-1 .img-intro-right {zoom:1; padding-left:20px;}
+.img-fulltext-left {zoom:1; padding-right:20px;}
+.img-fulltext-right {zoom:1; padding-left:20px;}
+
+.img-intro-left p.img_caption,
+.img-intro-right p.img_caption,
+.img-fulltext-left p.img_caption,
+.img-fulltext-right p.img_caption {
+background: transparent;
+-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#B2000000,endColorstr=#B2000000)"; /* IE8 */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#B2000000,endColorstr=#B2000000);   /* IE6 & 7 */
+      zoom: 1;
+}
+.component-content .rt-article-icons ul li {display:inline; }
+.component-content .rt-article-icons ul li a {display:inline-block; zoom:1;}

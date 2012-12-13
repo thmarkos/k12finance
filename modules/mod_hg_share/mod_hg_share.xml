@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="1.6.0" client="site" method="upgrade">
+	<name>HG Social Share Module</name>
+	<author>Marius Hogas</author>
+	<creationDate>Dec 2012</creationDate>
+	<copyright>Copyright (C) 2005 - 2011 Open Source Matters. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>mhogas@gmail.com</authorEmail>
+	<authorUrl>www.hogash.com/</authorUrl>
+	<version>1.0.0</version>
+	<description>In this module you can control what tools you can use for social sharing, Facebook Like Button, Tweet This Button or Google Plus button.</description>
+	<files>
+		<filename module="mod_hg_share">mod_hg_share.php</filename>
+		<filename>index.html</filename>
+		<filename>mod_hg_share.xml</filename>
+		<folder>admin</folder>
+	</files>
+
+	<help key="Module Top" />
+	<config>
+		<fields name="params" addfieldpath="/modules/mod_hg_share/admin/elements">
+			<fieldset name="basic">
+				<field type="asset" path="modules/mod_hg_share/admin/" />
+				
+				<field type="spacer" label="Like Button" class="redtitle" />
+				
+				<field name="fblike" default="0" type="list" label="Enable Facebook Like Button">
+					<option value="0">Yes</option>
+					<option value="1">No</option>
+				</field>
+				
+				<field type="spacer" hr="true" class="topmargin" />
+				<field type="spacer" label="Tweet button" class="redtitle" />
+				
+				<field name="tweet" default="0" type="list" label="Enable Tweet this Button">
+					<option value="0">Yes</option>
+					<option value="1">No</option>
+				</field>
+				<field name="text" default="Put here a text that will be tweeted" size="15" type="text" label="Tweet Text" description="The text which will tweeted." />
+				<field name="via" default="" type="text" label="Your Twitter username" description="This user will be @ mentioned in the suggested Tweet" />
+				<field name="url" default="" type="text" label="Your website's URL" description="This link that will be mentioned in the suggested Tweet. Leave blank and the url will be the URL for the page the button is on." />
+					
+				<field name="follow" default="0" type="list" label="Enable Follow Button?">
+					<option value="0">Yes</option>
+					<option value="1">No</option>
+				</field>
+				
+				<field type="spacer" hr="true" class="topmargin" />
+				<field type="spacer" label="GPlus Button" class="redtitle" />
+				
+				<field name="gplus" default="0" type="list" label="Enable Google Plus Button">
+					<option value="0">Yes</option>
+					<option value="1">No</option>
+				</field>
+				
+			</fieldset>
+			<fieldset name="advanced">
+				<field name="moduleclass_sfx" type="text" label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL" description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+				<field name="cache" type="list" default="0" label="COM_MODULES_FIELD_CACHING_LABEL" description="COM_MODULES_FIELD_CACHING_DESC">
+					<option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

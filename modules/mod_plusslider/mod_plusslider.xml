@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="1.7.0" client="site" method="upgrade">
+	<name>Plus Slider Module</name>
+	<author>Marius Hogas, Jamy Golden</author>
+	<creationDate>Dec 2011</creationDate>
+	<copyright>Copyright (C) 2012 www.hogash.com</copyright>
+	<license>GPL</license>
+	<authorEmail>mhogas@gmail.com</authorEmail>
+	<authorUrl>www.hogash.com</authorUrl>
+	<version>1.0.0</version>
+	<description><![CDATA[
+	Simple but powerful image/content slider developed by Jamy Golden http://css-plus.com/examples/plugins/PlusSlider/, extended by Marius Hogas.
+	]]></description>
+	<files>
+		<filename module="mod_plusslider">mod_plusslider.php</filename>
+		<filename>index.html</filename>
+		<filename>mod_plusslider.xml</filename>
+		<filename>helper.php</filename>
+		<folder>admin</folder>
+		<folder>assets</folder>
+		<folder>tmpl</folder>
+	</files>
+
+	<help key="Plus Slider Module" />
+	<config>
+		<fields name="params" addfieldpath="/modules/mod_plusslider/admin/elements">
+			<fieldset name="basic">
+				
+				<field type="info" label="Slider Settings"/>
+				<field name="width" type="text" default="940" size="20" label="Width of container" description="Width (px)" />
+				<field name="height" type="text" default="400" size="20" label="Height of container" description="Height (px)" />
+				
+				<field name="sliderType" default="slider" type="radio" label="Animation Type" description="Select your animation type">
+					<option value="fader">Fade</option>
+					<option value="slider">Slide</option>
+				</field>
+				<field name="sliderEasing" type="list" default="easeOutQuad" label="Easing type">
+					<option value="jswing">jswing</option><option value="def">def</option><option value="easeInQuad">easeInQuad</option><option value="easeOutQuad">easeOutQuad</option><option value="easeInOutQuad">easeInOutQuad</option><option value="easeInCubic">easeInCubic</option><option value="easeOutCubic">easeOutCubic</option><option value="easeInOutCubic">easeInOutCubic</option><option value="easeInQuart">easeInQuart</option><option value="easeOutQuart">easeOutQuart</option><option value="easeInOutQuart">easeInOutQuart</option><option value="easeInQuint">easeInQuint</option><option value="easeOutQuint">easeOutQuint</option><option value="easeInOutQuint">easeInOutQuint</option><option value="easeInSine">easeInSine</option><option value="easeOutSine">easeOutSine</option><option value="easeInOutSine">easeInOutSine</option><option value="easeInExpo">easeInExpo</option><option value="easeOutExpo">easeOutExpo</option><option value="easeInOutExpo">easeInOutExpo</option><option value="easeInCirc">easeInCirc</option><option value="easeOutCirc">easeOutCirc</option><option value="easeInOutCirc">easeInOutCirc</option><option value="easeInElastic">easeInElastic</option><option value="easeOutElastic">easeOutElastic</option><option value="easeInOutElastic">easeInOutElastic</option><option value="easeInBack">easeInBack</option><option value="easeOutBack">easeOutBack</option><option value="easeInOutBack">easeInOutBack</option><option value="easeInBounce">easeInBounce</option><option value="easeOutBounce">easeOutBounce</option><option value="easeInOutBounce">easeInOutBounce</option>
+				</field>
+				<field name="displayTime" type="text" default="4000" size="20" label="Cycling speed" description="The amount of time the slide waits before automatically moving on to the next one. This requires 'autoPlay: true'" />
+				<field name="speed" type="text" default="500" size="20" label="Animation speed" description="The amount of time it takes for a slide to fade into another slide" />
+				<field name="defaultSlide" type="text" default="0" size="20" label="Slide To Start" description="Sets the default starting slide - Number based on item index (0 = first slide)" />
+				
+				<field name="autoPlay" default="true" type="radio" label="Autoplay?" description="Creats a times, looped 'slide-show'">
+					<option value="true">Yes</option>
+					<option value="false">No</option>
+				</field>
+				
+				<field name="keyboardNavigation" default="true" type="radio" label="Keyboard navigation?" description="The keyboard's directional left and right arrows function as next and previous buttons">
+					<option value="true">Yes</option>
+					<option value="false">No</option>
+				</field>
+				
+				<field name="pauseOnHover" default="true" type="radio" label="Pause on hover?" description="AutoPlay does not continue ifsomeone hovers over Plus Slider.">
+					<option value="true">Yes</option>
+					<option value="false">No</option>
+				</field>
+				
+				<field name="createArrows" default="true" type="radio" label="Add nav. arrows?" description="Creates forward and backward navigation">
+					<option value="true">Yes</option>
+					<option value="false">No</option>
+				</field>
+				
+				<field name="createPagination" default="true" type="radio" label="Add bullets?" description="Creates Numbered pagination">
+					<option value="true">Yes</option>
+					<option value="false">No</option>
+				</field>
+
+				<field type="info" label="Slides"/>
+				<field type="spacer" label="Slide 1" class="redtitle" />
+				<field name="active1" type="radio" default="0" label="Activate slide?" description="Choose if you want to dispay this slide.">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="title1" type="text" default="" size="50" label="Slide Title Big" />
+				<field name="title_small1" type="text" default="" size="50" label="Slide Title Small" />
+				<field name="type1" type="list" default="image" label="Content Type" description="Choose what type of content to have on this slide.">
+					<option value="image">Image</option>
+					<option value="youtube">Youtube video</option>
+					<option value="vimeo">Vimeo Video</option>
+					<option value="flv">Own FLV Video</option>
+				</field>
+				<field name="image1" type="media" directory="" label="Slide Image" description="Make sure you choosed Image from the above list." />
+				<field name="url1" default="" type="text" label="Slide Link" description="Adds a link to the big image." />
+				<field name="target1" default="0" type="radio" label="Open in new window?" description="Select Yes if you want to open the url inside a new window.">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="video1" default="" type="text" label="Video ID" description="In case you choosed Vimeo or Youtube video from the above list, add it's ID. This field is for both Vimeo or Youtube, the idea is to choose which one to show from the list above." />
+				<field name="flvfile1" type="filelist" default="" label="Select a file" description="First you must go to Media Manager, create a new folder called 'flv' and upload your flv files there. The flv folder path should be images/flv/ in order for the below dropdown to work and extract the files from that folder. In case there is no item in the dropdown or an error appears in this module (jFolder..) it means you haven't created the folder or the folder you created is not correct." directory="images/flv" />
+				<field name="flv_image1" type="media" directory="" label="FLV Screenshot image" />
+					
+				<field type="info" label=""/>
+				<field type="spacer" label="Slide 2" class="redtitle" />
+				<field name="active2" type="radio" default="0" label="Activate slide?" description="Choose if you want to dispay this slide.">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="title2" type="text" default="" size="50" label="Slide Title Big" />
+				<field name="title_small2" type="text" default="" size="50" label="Slide Title Small" />
+				<field name="type2" type="list" default="image" label="Content Type" description="Choose what type of content to have on this slide.">
+					<option value="image">Image</option>
+					<option value="youtube">Youtube video</option>
+					<option value="vimeo">Vimeo Video</option>
+					<option value="flv">Own FLV Video</option>
+				</field>
+				<field name="image2" type="media" directory="" label="Slide Image " />
+				<field name="url2" default="" type="text" label="Slide Link" description="Adds a link to the big image." />
+				<field name="target2" default="0" type="radio" label="Open in new window?" description="Select Yes if you want to open the url inside a new window.">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="video2" default="" type="text" label="Video ID" description="In case you choosed Vimeo or Youtube video from the above list, add it's ID. This field is for both Vimeo or Youtube, the idea is to choose which one to show from the list above." />
+				<field name="flvfile2" type="filelist" default="" label="Select a file" description="First you must go to Media Manager, create a new folder called 'flv' and upload your flv files there. The flv folder path should be images/flv/ in order for the below dropdown to work and extract the files from that folder. In case there is no item in the dropdown or an error appears in this module (jFolder..) it means you haven't created the folder or the folder you created is not correct." directory="images/flv" />
+				<field name="flv_image2" type="media" directory="" label="FLV Screenshot image" />
+				
+				<field type="info" label=""/>
+				<field type="spacer" label="Slide 3" class="redtitle" />
+				<field name="active3" type="radio" default="0" label="Activate slide?" description="Choose if you want to dispay this slide.">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="title3" type="text" default="" size="50" label="Slide Title Big" />
+				<field name="title_small3" type="text" default="" size="50" label="Slide Title Small" />
+				<field name="type3" type="list" default="image" label="Content Type" description="Choose what type of content to have on this slide.">
+					<option value="image">Image</option>
+					<option value="youtube">Youtube video</option>
+					<option value="vimeo">Vimeo Video</option>
+					<option value="flv">Own FLV Video</option>
+				</field>
+				<field name="image3" type="media" directory="" label="Slide Image " />
+				<field name="url3" default="" type="text" label="Slide Link" description="Adds a link to the big image." />
+				<field name="target3" default="0" type="radio" label="Open in new window?" description="Select Yes if you want to open the url inside a new window.">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="video3" default="" type="text" label="Video ID" description="In case you choosed Vimeo or Youtube video from the above list, add it's ID. This field is for both Vimeo or Youtube, the idea is to choose which one to show from the list above." />
+				<field name="flvfile3" type="filelist" default="" label="Select a file" description="First you must go to Media Manager, create a new folder called 'flv' and upload your flv files there. The flv folder path should be images/flv/ in order for the below dropdown to work and extract the files from that folder. In case there is no item in the dropdown or an error appears in this module (jFolder..) it means you haven't created the folder or the folder you created is not correct." directory="images/flv" />
+				<field name="flv_image3" type="media" directory="" label="FLV Screenshot image" />
+				
+				<field type="info" label=""/>
+				<field type="spacer" label="Slide 4" class="redtitle" />
+				<field name="active4" type="radio" default="0" label="Activate slide?" description="Choose if you want to dispay this slide.">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="title4" type="text" default="" size="50" label="Slide Title Big" />
+				<field name="title_small4" type="text" default="" size="50" label="Slide Title Small" />
+				<field name="type4" type="list" default="image" label="Content Type" description="Choose what type of content to have on this slide.">
+					<option value="image">Image</option>
+					<option value="youtube">Youtube video</option>
+					<option value="vimeo">Vimeo Video</option>
+					<option value="flv">Own FLV Video</option>
+				</field>
+				<field name="image4" type="media" directory="" label="Slide Image " />
+				<field name="url4" default="" type="text" label="Slide Link" description="Adds a link to the big image." />
+				<field name="target4" default="0" type="radio" label="Open in new window?" description="Select Yes if you want to open the url inside a new window.">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="video4" default="" type="text" label="Video ID" description="In case you choosed Vimeo or Youtube video from the above list, add it's ID. This field is for both Vimeo or Youtube, the idea is to choose which one to show from the list above." />
+				<field name="flvfile4" type="filelist" default="" label="Select a file" description="First you must go to Media Manager, create a new folder called 'flv' and upload your flv files there. The flv folder path should be images/flv/ in order for the below dropdown to work and extract the files from that folder. In case there is no item in the dropdown or an error appears in this module (jFolder..) it means you haven't created the folder or the folder you created is not correct." directory="images/flv" />
+				<field name="flv_image4" type="media" directory="" label="FLV Screenshot image" />
+				
+				<field type="info" label=""/>
+				<field type="spacer" label="Slide 5" class="redtitle" />
+				<field name="active5" type="radio" default="0" label="Activate slide?" description="Choose if you want to dispay this slide.">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="title5" type="text" default="" size="50" label="Slide Title Big" />
+				<field name="title_small5" type="text" default="" size="50" label="Slide Title Small" />
+				<field name="type5" type="list" default="image" label="Content Type" description="Choose what type of content to have on this slide.">
+					<option value="image">Image</option>
+					<option value="youtube">Youtube video</option>
+					<option value="vimeo">Vimeo Video</option>
+					<option value="flv">Own FLV Video</option>
+				</field>
+				<field name="image5" type="media" directory="" label="Slide Image " />
+				<field name="url5" default="" type="text" label="Slide Link" description="Adds a link to the big image." />
+				<field name="target5" default="0" type="radio" label="Open in new window?" description="Select Yes if you want to open the url inside a new window.">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="video5" default="" type="text" label="Video ID" description="In case you choosed Vimeo or Youtube video from the above list, add it's ID. This field is for both Vimeo or Youtube, the idea is to choose which one to show from the list above." />
+				<field name="flvfile5" type="filelist" default="" label="Select a file" description="First you must go to Media Manager, create a new folder called 'flv' and upload your flv files there. The flv folder path should be images/flv/ in order for the below dropdown to work and extract the files from that folder. In case there is no item in the dropdown or an error appears in this module (jFolder..) it means you haven't created the folder or the folder you created is not correct." directory="images/flv" />
+				<field name="flv_image5" type="media" directory="" label="FLV Screenshot image" />
+				
+				<field type="info" label=""/>
+				<field type="spacer" label="Slide 6" class="redtitle" />
+				<field name="active6" type="radio" default="0" label="Activate slide?" description="Choose if you want to dispay this slide.">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="title6" type="text" default="" size="50" label="Slide Title Big" />
+				<field name="title_small6" type="text" default="" size="50" label="Slide Title Small" />
+				<field name="type6" type="list" default="image" label="Content Type" description="Choose what type of content to have on this slide.">
+					<option value="image">Image</option>
+					<option value="youtube">Youtube video</option>
+					<option value="vimeo">Vimeo Video</option>
+					<option value="flv">Own FLV Video</option>
+				</field>
+				<field name="image6" type="media" directory="" label="Slide Image " />
+				<field name="url6" default="" type="text" label="Slide Link" description="Adds a link to the big image." />
+				<field name="target6" default="0" type="radio" label="Open in new window?" description="Select Yes if you want to open the url inside a new window.">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="video6" default="" type="text" label="Video ID" description="In case you choosed Vimeo or Youtube video from the above list, add it's ID. This field is for both Vimeo or Youtube, the idea is to choose which one to show from the list above." />
+				<field name="flvfile6" type="filelist" default="" label="Select a file" description="First you must go to Media Manager, create a new folder called 'flv' and upload your flv files there. The flv folder path should be images/flv/ in order for the below dropdown to work and extract the files from that folder. In case there is no item in the dropdown or an error appears in this module (jFolder..) it means you haven't created the folder or the folder you created is not correct." directory="images/flv" />
+				<field name="flv_image6" type="media" directory="" label="FLV Screenshot image" />
+				
+				<field type="info" label=""/>
+				<field type="spacer" label="Slide 7" class="redtitle" />
+				<field name="active7" type="radio" default="0" label="Activate slide?" description="Choose if you want to dispay this slide.">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="title7" type="text" default="" size="50" label="Slide Title Big" />
+				<field name="title_small7" type="text" default="" size="50" label="Slide Title Small" />
+				<field name="type7" type="list" default="image" label="Content Type" description="Choose what type of content to have on this slide.">
+					<option value="image">Image</option>
+					<option value="youtube">Youtube video</option>
+					<option value="vimeo">Vimeo Video</option>
+					<option value="flv">Own FLV Video</option>
+				</field>
+				<field name="image7" type="media" directory="" label="Slide Image " />
+				<field name="url7" default="" type="text" label="Slide Link" description="Adds a link to the big image." />
+				<field name="target7" default="0" type="radio" label="Open in new window?" description="Select Yes if you want to open the url inside a new window.">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="video7" default="" type="text" label="Video ID" description="In case you choosed Vimeo or Youtube video from the above list, add it's ID. This field is for both Vimeo or Youtube, the idea is to choose which one to show from the list above." />
+				<field name="flvfile7" type="filelist" default="" label="Select a file" description="First you must go to Media Manager, create a new folder called 'flv' and upload your flv files there. The flv folder path should be images/flv/ in order for the below dropdown to work and extract the files from that folder. In case there is no item in the dropdown or an error appears in this module (jFolder..) it means you haven't created the folder or the folder you created is not correct." directory="images/flv" />
+				<field name="flv_image7" type="media" directory="" label="FLV Screenshot image" />
+				
+				<field type="info" label=""/>
+				<field type="spacer" label="Slide 8" class="redtitle" />
+				<field name="active8" type="radio" default="0" label="Activate slide?" description="Choose if you want to dispay this slide.">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="title8" type="text" default="" size="50" label="Slide Title Big" />
+				<field name="title_small8" type="text" default="" size="50" label="Slide Title Small" />
+				<field name="type8" type="list" default="image" label="Content Type" description="Choose what type of content to have on this slide.">
+					<option value="image">Image</option>
+					<option value="youtube">Youtube video</option>
+					<option value="vimeo">Vimeo Video</option>
+					<option value="flv">Own FLV Video</option>
+				</field>
+				<field name="image8" type="media" directory="" label="Slide Image " />
+				<field name="url8" default="" type="text" label="Slide Link" description="Adds a link to the big image." />
+				<field name="target8" default="0" type="radio" label="Open in new window?" description="Select Yes if you want to open the url inside a new window.">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="video8" default="" type="text" label="Video ID" description="In case you choosed Vimeo or Youtube video from the above list, add it's ID. This field is for both Vimeo or Youtube, the idea is to choose which one to show from the list above." />
+				<field name="flvfile8" type="filelist" default="" label="Select a file" description="First you must go to Media Manager, create a new folder called 'flv' and upload your flv files there. The flv folder path should be images/flv/ in order for the below dropdown to work and extract the files from that folder. In case there is no item in the dropdown or an error appears in this module (jFolder..) it means you haven't created the folder or the folder you created is not correct." directory="images/flv" />
+				<field name="flv_image8" type="media" directory="" label="FLV Screenshot image" />
+				
+				<field type="info" label=""/>
+				<field type="spacer" label="Slide 9" class="redtitle" />
+				<field name="active9" type="radio" default="0" label="Activate slide?" description="Choose if you want to dispay this slide.">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="title9" type="text" default="" size="50" label="Slide Title Big" />
+				<field name="title_small9" type="text" default="" size="50" label="Slide Title Small" />
+				<field name="type9" type="list" default="image" label="Content Type" description="Choose what type of content to have on this slide.">
+					<option value="image">Image</option>
+					<option value="youtube">Youtube video</option>
+					<option value="vimeo">Vimeo Video</option>
+					<option value="flv">Own FLV Video</option>
+				</field>
+				<field name="image9" type="media" directory="" label="Slide Image " />
+				<field name="url9" default="" type="text" label="Slide Link" description="Adds a link to the big image." />
+				<field name="target9" default="0" type="radio" label="Open in new window?" description="Select Yes if you want to open the url inside a new window.">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="video9" default="" type="text" label="Video ID" description="In case you choosed Vimeo or Youtube video from the above list, add it's ID. This field is for both Vimeo or Youtube, the idea is to choose which one to show from the list above." />
+				<field name="flvfile9" type="filelist" default="" label="Select a file" description="First you must go to Media Manager, create a new folder called 'flv' and upload your flv files there. The flv folder path should be images/flv/ in order for the below dropdown to work and extract the files from that folder. In case there is no item in the dropdown or an error appears in this module (jFolder..) it means you haven't created the folder or the folder you created is not correct." directory="images/flv" />
+				<field name="flv_image9" type="media" directory="" label="FLV Screenshot image" />
+				
+				<field type="info" label=""/>
+				<field type="spacer" label="Slide 10" class="redtitle" />
+				<field name="active10" type="radio" default="0" label="Activate slide?" description="Choose if you want to dispay this slide.">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="title10" type="text" default="" size="50" label="Slide Title Big" />
+				<field name="title_small10" type="text" default="" size="50" label="Slide Title Small" />
+				<field name="type10" type="list" default="image" label="Content Type" description="Choose what type of content to have on this slide.">
+					<option value="image">Image</option>
+					<option value="youtube">Youtube video</option>
+					<option value="vimeo">Vimeo Video</option>
+					<option value="flv">Own FLV Video</option>
+				</field>
+				<field name="image10" type="media" directory="" label="Slide Image " />
+				<field name="url10" default="" type="text" label="Slide Link" description="Adds a link to the big image." />
+				<field name="target10" default="0" type="radio" label="Open in new window?" description="Select Yes if you want to open the url inside a new window.">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="video10" default="" type="text" label="Video ID" description="In case you choosed Vimeo or Youtube video from the above list, add it's ID. This field is for both Vimeo or Youtube, the idea is to choose which one to show from the list above." />
+				<field name="flvfile10" type="filelist" default="" label="Select a file" description="First you must go to Media Manager, create a new folder called 'flv' and upload your flv files there. The flv folder path should be images/flv/ in order for the below dropdown to work and extract the files from that folder. In case there is no item in the dropdown or an error appears in this module (jFolder..) it means you haven't created the folder or the folder you created is not correct." directory="images/flv" />
+				<field name="flv_image10" type="media" directory="" label="FLV Screenshot image" />
+				
+				<field type="asset" path="modules/mod_plusslider/admin/" />
+			</fieldset>
+			<fieldset name="advanced">
+				<field name="moduleclass_sfx" type="text" label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL" description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+				<field name="cache" type="list" default="0" label="COM_MODULES_FIELD_CACHING_LABEL" description="COM_MODULES_FIELD_CACHING_DESC">
+					<option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

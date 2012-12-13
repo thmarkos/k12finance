@@ -1,0 +1,7 @@
+.redtitle {color:#f00; font-size:110%; font-weight:bold; margin:10px 0; border-bottom:1px solid #ccc; }
+.adminformlist li {clear:both;}
+.somemargin {margin:20px 0; }
+.enote {color:#888;}
+span.topmargin {margin-top:20px; display: block;}
+
+.redtitle label, .enote label {max-width:100% !important;}

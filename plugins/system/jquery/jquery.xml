@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="1.6" type="plugin" group="system" method="upgrade">
+	<name>System - Jquery</name>
+	<author>Marius Hogas</author>
+	<creationDate>Nov 9th, 2011</creationDate>
+	<copyright>Copyright (c) 2011 Marius Hogas. All rights reserved.</copyright>
+	<authorEmail>mhogas@gmail.com</authorEmail>
+	<authorUrl>www.hogash.com</authorUrl>
+	<version>1</version>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<description>Simple Load of jQuery from the Google's CDN</description>
+	<files>
+		<filename plugin="jquery">jquery.php</filename>
+		<filename>jquery.noconflict.js</filename>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="version" type="text" default="1.7.1" size="80" label="Jquery Version" description="Enter the jquery's version." />
+				<field name="noconflict" type="list" default="1" label="Enable Jquery Noconflict" description="" >
+				   <option value="0">No</option>
+				   <option value="1">Yes</option>
+				</field>
+			</fieldset>
+        </fields>
+	</config>
+</extension>

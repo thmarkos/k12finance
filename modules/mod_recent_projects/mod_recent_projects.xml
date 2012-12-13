@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="1.6.0" client="site" method="upgrade">
+	<name>Recent Projects Module</name>
+	<author>Marius Hogas</author>
+	<creationDate>August 2011</creationDate>
+	<copyright>Copyright (C) 2005 - 2011 Open Source Matters. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>mhogas@gmail.com</authorEmail>
+	<authorUrl>www.hogash.com/ammon_joomla/</authorUrl>
+	<version>1.0.0</version>
+	<description>This module adds 3 thumbnails with your latest works.</description>
+	<files>
+		<filename module="mod_recent_projects">mod_recent_projects.php</filename>
+		<filename>index.html</filename>
+		<filename>helper.php</filename>
+		<filename>mod_recent_projects.xml</filename>
+	</files>
+
+	<help key="Module Top" />
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="maintitle" default="" type="text" label="Main module title" description="The module's title which will appear." />
+				<field name="maindescription" default="" type="textarea" rows="8" cols="25" label="Main Description"/>
+				<field name="mainlink" type="menuitem" label="Link" />
+				<field name="btntext" type="text" default="view all of our projects →" label="View all button" />
+				
+				<field type="spacer" hr="true"  />
+				
+				<field name="title1" default="" type="text" label="Titlee Project #1" description="The project's title which will appear." />
+				<field name="image1" type="media" directory="" label="Image Project #1" description="The image which will appear in the module." />
+				<field name="description1" default="" type="textarea" rows="8" cols="25" label="Description Project #1"/>
+				<field name="linktype1" type="list" default="none" label="Link type of Project #1" description="Choose either no link, menu item, external link or article link.">
+					<option value="none">None</option>
+					<option value="internal">Menu Item</option>
+					<option value="external">External link</option>
+					<option value="article">Article link</option>
+				</field>
+				<field name="link1" type="menuitem" label="Menu Item Project #1" description="First make sure you have selected from the above list." />
+				<field name="externallink1" type="text" label="External Link Project #1" description="First make sure you have selected from the above list." />
+				<field name="articlelink1" type="sql" default="" label="Select an article Project #1" query="SELECT id, title FROM #__content" key_field="id" value_field="title" description="First make sure you have selected from the above list." />
+				
+				<field type="spacer" hr="true"  />
+				
+				<field name="title2" default="" type="text" label="Titlee Project #2" description="The project's title which will appear." />
+				<field name="image2" type="media" directory="" label="Image Project #2" description="The image which will appear in the module." />
+				<field name="description2" default="" type="textarea" rows="8" cols="25" label="Description Project #2"/>
+				<field name="linktype2" type="list" default="none" label="Link type of Project #2" description="Choose either no link, menu item, external link or article link.">
+					<option value="none">None</option>
+					<option value="internal">Menu Item</option>
+					<option value="external">External link</option>
+					<option value="article">Article link</option>
+				</field>
+				<field name="link2" type="menuitem" label="Menu Item Project #2" description="First make sure you have selected from the above list." />
+				<field name="externallink2" type="text" label="External Link Project #2" description="First make sure you have selected from the above list." />
+				<field name="articlelink2" type="sql" default="" label="Select an article Project #2" query="SELECT id, title FROM #__content" key_field="id" value_field="title" description="First make sure you have selected from the above list." />
+				
+				<field type="spacer" hr="true" />
+				
+				<field name="title3" default="" type="text" label="Titlee Project #3" description="The project's title which will appear." />
+				<field name="image3" type="media" directory="" label="Image Project #3" description="The image which will appear in the module." />
+				<field name="description3" default="" type="textarea" rows="8" cols="25" label="Description Project #3"/>
+				<field name="linktype3" type="list" default="none" label="Link type of Project #3" description="Choose either no link, menu item, external link or article link.">
+					<option value="none">None</option>
+					<option value="internal">Menu Item</option>
+					<option value="external">External link</option>
+					<option value="article">Article link</option>
+				</field>
+				<field name="link3" type="menuitem" label="Menu Item Project #3" description="First make sure you have selected from the above list." />
+				<field name="externallink3" type="text" label="External Link Project #3" description="First make sure you have selected from the above list." />
+				<field name="articlelink3" type="sql" default="" label="Select an article Project #3" query="SELECT id, title FROM #__content" key_field="id" value_field="title" description="First make sure you have selected from the above list." />
+				
+			</fieldset>
+			<fieldset name="advanced">
+				<field name="moduleclass_sfx" type="text" label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL" description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+				<field name="cache" type="list" default="0" label="COM_MODULES_FIELD_CACHING_LABEL" description="COM_MODULES_FIELD_CACHING_DESC">
+					<option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

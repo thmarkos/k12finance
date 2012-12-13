@@ -1,0 +1,383 @@
+/**
+ * @version	   $Id:  $
+ * @copyright  Copyright (C) 2011 Migur Ltd. All rights reserved.
+ * @license	   GNU General Public License version 2 or later; see LICENSE.txt
+ */
+
+/* TODO: Need to move all *newsletters* styles to newsletters.css */
+
+iframe {
+    overflow: hidden;
+}
+
+div.toolbar-list li a span {
+    margin-bottom: 3px;
+}
+
+form #filter-bar
+{
+    height: auto !important;
+}
+
+.filter-panel {
+/*    height: 45px;*/
+}
+
+.icon-16-slide-up {
+    background-image: url("../../system/images/sort0.png");
+}
+
+.icon-16-slide-down {
+    background-image: url("../../system/images/sort1.png");
+}
+
+.filter-panel-control {
+    margin-top: 38px;
+    float: left;
+}
+.filter-panel .label {
+    color: #888;
+    margin-left: 3px;
+}
+
+tr th img {
+    float: none;
+}
+
+.filter-panel-control span {
+    float: right;
+    display: block;
+    width: 12px;
+    height: 12px;
+    margin: 3px;
+}
+
+button {
+    height: 18px;
+    font-size: 0.909em;
+}
+
+.button {
+    height: 18px;
+    padding-bottom: 2px;
+}
+
+fieldset {
+    background-color: #ffffff;
+}
+
+fieldset.filter-bar {
+    border-color: -moz-use-text-color -moz-use-text-color #D5D5D5;
+    border-style: none none solid;
+    border-width: 0 0 1px;
+}
+
+#form-subscribers .filter-search .btn,
+#form-lists .filter-search .btn {
+    margin: 5px;
+}
+
+#form-subscribers .filter-select,
+#form-lists .filter-select {
+    margin-top: 15px;
+    float: left;
+    margin-right: 20px;
+}
+
+.nl-subscribers {
+    width: 100%;
+}
+
+.sslist {
+    clear: both;
+}
+
+.sslist-submit {
+    float: right;
+}
+
+.sslist .image-remove {
+    padding: 0;
+}
+
+fieldset th {
+    text-align: center;
+}
+
+#subscriber-form-edit {
+    width: 100%;
+    margin: 0 auto;
+    float: none;
+}
+
+.submit-changes {
+    background-color: #ffdddd;
+}
+
+#newsletters_statistics dd,dt {
+	display:block;
+	text-align:left;
+}
+
+#newsletters_statistics dl{
+	width: 400px;
+}
+
+#tabs {
+    padding: 20px;
+    margin: 2px;
+}
+
+#multitab-toolbar {
+    height: 30px;
+}
+
+#multitab-toolbar a {
+    margin-top:-20px;
+    border: none;
+    height: 30px;
+}
+
+div.form-text {
+    text-align: right;
+}
+
+div.form-text dl dt {
+    text-align: left;
+    width: 80px;
+    float: left;
+    clear: both;
+}
+
+div.form-text dl dd {
+    padding: 2px 0px 0px 90px;
+    margin: 0;
+    width: auto;
+}
+
+div.form-text dl label {
+    margin-top:4px;
+    min-width: 50px;
+    text-align: left;
+}
+
+div.form-text dl dd input {
+/*    width:100%;*/
+    float: none;
+}
+
+.blue {
+    color: #2B6FB6;
+}
+
+.margin-5 {
+    margin: 5px;
+}
+
+.icon-right {
+    background-position: left;
+}
+
+.scrollable {
+    overflow: auto;
+}
+
+.overdropp {
+    background-color: #EFFFEF;
+}
+
+div.mrg {
+    margin: 10px 15px;
+    padding: 0;
+    border: 0;
+    width: 100%;
+}
+
+.hide {
+    display: none;
+}
+
+.paginated-hide {
+    display: none;
+}
+
+#history-container {
+    overflow: auto;
+    height: 270px;
+}
+
+.pagination .limit select {
+    float: none;
+}
+
+.container {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    width: 100%;
+}
+
+.icon-32-autosave-on {
+    background: url('../images/icon-32-autosave.png') no-repeat left top;
+}
+
+.icon-32-autosave-off {
+    background: url('../images/icon-32-autosave.png') no-repeat left bottom;
+}
+
+.icon-16-gear-disabled {
+    background: url('../images/icon-16-gear.png') no-repeat left top;
+    width: 16px;
+    height: 16px;
+    display: block;
+}
+
+.icon-16-gear {
+    background: url('../images/icon-16-gear.png') no-repeat left bottom;
+    width: 16px;
+    height: 16px;
+    display: block;
+}
+
+table.adminlist thead th {
+    padding-left: 8px;
+}
+
+textarea.invalid {
+    border: 1px solid red;
+}
+
+.disabled {
+    background-position: left bottom;
+}
+
+.tab-invalid {
+    color: red !important;
+    font-weight: bold;
+}
+
+.preloader {
+	background: url('../images/preloader.gif') left top no-repeat;
+	padding-left: 22px;
+	line-height: 18px;
+	color: #888;
+	min-height: 18px;
+	min-width: 18px;
+	display: block;
+}
+
+.preloader-right {
+	background: url('../images/preloader.gif') left top no-repeat;
+	padding-left: 22px;
+	line-height: 18px;
+	color: #888;
+	min-height: 18px;
+	min-width: 18px;
+	display: block;
+	float: right;
+}
+
+.icon-32-messaging {
+    background-image: url("../images/icon-32-messaging.png");
+}
+
+.icon-32-alert {
+    background-image: url("../images/icon-32-alert.png");
+}
+
+.juser-type-icon {
+    background: url("../images/joomla-icon.png") no-repeat 1px 1px;
+	height: 16px;
+	width: 16px;
+	float: right;
+	margin: 0 5px;
+}
+
+.subscriber-type-icon {
+    background: url("../images/migur-newsletter-16x16.png") no-repeat;
+	height: 16px;
+	width: 16px;
+	float: right;
+	margin: 0 5px;
+}
+
+.joomla-style ul {
+    background-repeat: no-repeat;
+	background-position: 4px top;
+	list-style: none outside none;
+    margin-bottom: 10px;
+    padding: 10px;
+	font-weight: bold;
+    text-indent: 30px;
+}
+
+
+.joomla-style li {
+    list-style: none outside none;
+    margin: 0;
+    padding: 0;
+	text-indent: 0;
+}
+
+
+.joomla-style ul.message {
+	color: #0055BB;
+	background-image: url("../../images/notice-alert.png");
+	background-color: #C3D2E5;	
+	border-color: #84A7DB;
+	border-bottom: 3px solid #84A7DB;
+    border-top: 3px solid #84A7DB;
+}
+
+	
+.joomla-style ul.error {
+	color: #CC0000;
+	background-image: url("../../images/notice-alert.png");
+	background-color: #E6C0C0;	
+	border-color: #DE7A7B;
+	border-bottom: 3px solid #DE7A7B;
+    border-top: 3px solid #DE7A7B;
+}
+
+.micro-button {
+	display: inline-block;
+	border: 1px solid #bbbbbb;
+	text-indent: 0px;
+	padding: 0 2px 1px;
+	margin: 0 2px;
+	background-color: #eeeeee;
+	text-decoration: none;
+}
+
+.micro-button:hover {
+	background-color: #cccccc;
+	text-decoration: none;
+}
+
+.nofloat {
+    clear: both;
+    float: none;
+    overflow: hidden;
+}
+
+.inline-hint-small {
+	color: #666;
+}
+
+.inputtext-replacer {
+	display: inline-block;
+	width: 100%;
+	text-align: left;
+	margin-left:5px;
+}
+
+.form-actions {
+	overflow: hidden;
+}
+
+.block-notice {
+	margin: 10px;
+    clear:both;
+	padding: 10px;
+	background-color: #ddd;
+}

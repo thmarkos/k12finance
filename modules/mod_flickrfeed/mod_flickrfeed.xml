@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="1.6.0" client="site" method="upgrade">
+	<name>Flickr Feed Module</name>
+	<author>Marius Hogas</author>
+	<creationDate>August 2011</creationDate>
+	<copyright>Copyright (C) 2005 - 2011 Open Source Matters. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>mhogas@gmail.com</authorEmail>
+	<authorUrl>www.hogash.com/ammon_joomla/</authorUrl>
+	<version>1.0.0</version>
+	<description>This plugin works by pulling a JSON feed from Flickr and applying the data it gets back to a template. </description>
+	<files>
+		<filename module="mod_flickrfeed">mod_flickrfeed.php</filename>
+		<filename>index.html</filename>
+		<filename>mod_flickrfeed.xml</filename>
+	</files>
+
+	<help key="Module Top" />
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="limit" default="9" type="text" label="Number of images" description="The total number of images you want to display." />
+				<field name="flickrid" type="text" default="" label="Flick id" description="You can get the flickr id by using this website www.idgettr.com" />
+				<field name="perrow" type="text" default="3" label="Images Per Row" description="This option will help adding a margin-right class to 0 so it can fit well " />
+				<field name="width" type="text" default="40" label="Thumbs Width" />
+				<field name="height" type="text" default="40" label="Thumbs Height" />
+				
+				<field name="follow_link" type="text" default="" label="Follow Link" description="Leave blank if you don't want any link." />
+				<field name="follow_text" type="text" default="" label="Follow Text" description="Leave blank if you don't want any link." />
+			</fieldset>
+			<fieldset name="advanced">
+				<field name="moduleclass_sfx" type="text" label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL" description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+				<field name="cache" type="list" default="0" label="COM_MODULES_FIELD_CACHING_LABEL" description="COM_MODULES_FIELD_CACHING_DESC">
+					<option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>
